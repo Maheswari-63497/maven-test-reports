@@ -10,7 +10,7 @@ pipeline {
   satege ('Deploy') {
     steps {
       script {
-        deploy adapters: [tomcat9(credentialsId: 'tomcatadmin', path: '', url: 'http://localhost:9090/')], contextPath: null, war: 'target/*.war'
+        deploy adapters: [tomcat9(credentialsId: 'admin', path: '', url: 'http://localhost:9090/')], contextPath: null, war: 'target/*.war'
       }
     }
   }     
